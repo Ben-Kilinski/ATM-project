@@ -3,10 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ATM Project :_:</title>
+    <title>ATM Simulation</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div id="atm">
+        <div id="screen">
+            <div id="welcome-screen" class="screen active">
+                <h1>Welcome to the ATM</h1>
+                <button id="insert-card">Insert Card</button>
+            </div>
+            <div id="pin-screen" class="screen">
+                <h1>Enter Your PIN</h1>
+                <input type="password" id="pin-input" maxlength="4" placeholder="****">
+                <button id="validate-pin">Enter</button>
+                <p id="pin-feedback" class="feedback"></p>
+            </div>
+            <div id="menu-screen" class="screen">
+                <h1>Main Menu</h1>
+                <button data-action="balance">Balance Inquiry</button>
+                <button data-action="withdraw">Withdraw Funds</button>
+                <button data-action="deposit">Deposit Funds</button>
+                <button data-action="exit">Exit</button>
+            </div>
+            <div id="balance-screen" class="screen">
+                <h1>Your Balance</h1>
+                <p id="balance-amount">$0.00</p>
+                <button id="back-menu">Back to Menu</button>
+            </div>
+            <div id="withdraw-screen" class="screen">
+                <h1>Withdraw Funds</h1>
+                <input type="number" id="withdraw-amount" placeholder="Enter amount">
+                <button id="confirm-withdraw">Withdraw</button>
+                <p id="withdraw-feedback" class="feedback"></p>
+            </div>
+            <div id="deposit-screen" class="screen">
+                <h1>Deposit Funds</h1>
+                <input type="number" id="deposit-amount" placeholder="Enter amount">
+                <button id="confirm-deposit">Deposit</button>
+                <p id="deposit-feedback" class="feedback"></p>
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

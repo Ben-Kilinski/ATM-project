@@ -1,0 +1,113 @@
+/* Geral */
+body {
+    font-family: Arial, sans-serif;
+    background: url('./img/DALL·E 2024-11-25 19.13.15 - A cozy and hyper-realistic nighttime urban scene of Avenida Paulista near the MASP metro station in São Paulo, Brazil, without the overpass. The scene.webp') 
+                no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* ATM Container */
+#atm {
+    position: fixed; /* Fixa o ATM na tela para garantir posicionamento */
+    left: 10%; /* Define a margem à esquerda de 16% */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajusta o centro vertical exato */
+    width: 38%; /* Largura proporcional */
+    max-width: 900px; /* Tamanho máximo */
+    height: 38%; 
+    max-height: 700px;
+    border: 5px solid #444;
+    border-radius: 20px;
+    background: linear-gradient(to bottom, #333, #555);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+/* Screen Area */
+#screen {
+    display: flex; /* Ativa Flexbox */
+    flex-direction: column; /* Alinha o conteúdo em uma coluna (vertical) */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    width: 90%; /* Mantém proporções já definidas */
+    height: 90%; /* Ajusta o tamanho ao necessário */
+    padding: 20px; /* Adiciona espaço interno */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Responsividade */
+
+/* Para telas menores que 768px (tablets e celulares grandes) */
+@media (max-width: 768px) {
+    #atm {
+        width: 60%;
+        height: 70%;
+    }
+
+    #screen {
+        width: 95%;
+        height: 55%;
+    }
+}
+
+/* Para telas menores que 480px (celulares) */
+@media (max-width: 480px) {
+    #atm {
+        width: 90%;
+        height: 80%;
+    }
+
+    #screen {
+        width: 100%;
+        height: 60%;
+    }
+}
+
+/* Telas Internas */
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
+/* Botões */
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Campos de Entrada */
+input {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%;
+}
+
+/* Feedback de Erros */
+.feedback {
+    color: red;
+    font-size: 14px;
+}
